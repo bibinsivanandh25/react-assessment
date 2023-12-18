@@ -40,7 +40,11 @@ const Login = () => {
     if (!email.trim()) {
       newErrors.email = 'Email is required';
       valid = false;
+    }  else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      newErrors.password = 'Invalid email address';
+      valid = false;
     }
+    
     if (!password.trim()) {
       newErrors.password = 'Password is required';
       valid = false;
