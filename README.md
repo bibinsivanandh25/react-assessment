@@ -18,30 +18,35 @@ npm or yarn
 
 ## Project Structure
 
-The project follows the following structure:
+### The project follows the following structure:
 
-social-login-profile-management/
-|-- src/
-| |-- components/
-| | |-- Button.jsx
-| | |-- OrBlock.jsx
-| | |-- ReCaptcha.jsx
-| | |-- ProfileComponent.jsx
-| | |-- SocialIcons.jsx
-| |-- features/
-| | |-- auth/
-| | | |-- authSlice.js
-| |-- pages/
-| | |-- Login.jsx
-| | |-- Profile.jsx
-| |-- App.jsx
-| |-- index.jsx
-|-- public/
+#### Login Page (Login.js)
 
-components/: Contains reusable UI components like buttons, blocks, and ReCaptcha.
-features/auth/: Manages authentication-related features, including the Redux slice (authSlice.js).
-App.js: The main component that sets up the routes and renders different pages.
-index.js: The entry point of the application.
+If the user is not authenticated, it will be redirected to the login page
+We are presented with social login options (GitHub, Google, Facebook).
+Upon successful login, we were redirected back to the profile page.
+
+#### Profile Page (Profile.js)
+The user navigates to the profile page (/profile) after a successful login.
+They are presented with a form to edit their profile information.
+The form includes fields such as username, first name, last name, address, city, country, postal code, and about.
+The user updates the necessary information and submits the form.
+
+#### Components (components/)
+Button.js: A reusable button component for consistent styling.
+OrBlock.js: A component for displaying an "or" block, separating different sections of the UI.
+ReCaptcha.js: A component for implementing ReCaptcha verification in the login form.
+SocialIcons.js: A component containing social media icons for use in the login page.
+
+#### Redux (features/auth/)
+authSlice.js: Manages the authentication state using Redux, including actions and reducers.
+
+#### Routing (App.js)
+Defines the routes for the landing page, login page, and profile page.
+Uses React Router to navigate between different pages.
+
+#### Entry Point (index.js)
+Renders the main application component (App.js) and injects it into the root HTML element.
 
 ## Technologies Used
 
