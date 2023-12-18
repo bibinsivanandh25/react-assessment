@@ -45,10 +45,10 @@ index.js: The entry point of the application.
 
 ## Technologies Used
 
-React.js
-Redux
-React Router DOM
-Tailwind CSS
+React.js,
+Redux,
+React Router DOM,
+Tailwind CSS,
 React Google Recaptcha
 
 ## Usage
